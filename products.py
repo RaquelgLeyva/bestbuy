@@ -23,6 +23,8 @@ class Product:
         self.quantity = quantity
         if quantity == 0:
             self.deactivate()
+        else:
+            self.activate()
 
     def is_active(self) -> bool:
         return self.active
@@ -43,7 +45,6 @@ class Product:
             raise ValueError("Quantity must be greater than zero.")
         if quantity > self.quantity:
             raise Exception("Not enough quantity in stock.")
-
         self.quantity -= quantity
         if self.quantity == 0:
             self.deactivate()
