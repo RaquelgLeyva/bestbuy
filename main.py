@@ -1,13 +1,13 @@
-from products import Product
-from store import Store
+import products
+import store
 
 product_list = [
-    Product("MacBook Air M2", price=1450, quantity=100),
-    Product("Bose QuietComfort Earbuds", price=250, quantity=500),
-    Product("Google Pixel 7", price=500, quantity=250),
+    products.Product("MacBook Air M2", price=1450, quantity=100),
+    products.Product("Bose QuietComfort Earbuds", price=250, quantity=500),
+    products.Product("Google Pixel 7", price=500, quantity=250),
 ]
 
-best_buy = Store(product_list)
+best_buy = store.Store(product_list)
 all_products = best_buy.get_all_products()
 
 print(best_buy.get_total_quantity())
